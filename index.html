@@ -6,8 +6,13 @@
   <link rel="stylesheet" href="./style.css">
 
 </head>
+<script>
+  setTimeout(() => {
+  document.getElementById('song').play();
+}, 500)
+</script>
 <body>
-  <audio src="abc.mp3" controls loop autoplay style="display: none;"></audio>
+  <audio src="abc.mp3" style="display: none;" loop id="song"></audio>
 <!-- partial:index.partial.html -->
   <header class="top-header">
 </header>
