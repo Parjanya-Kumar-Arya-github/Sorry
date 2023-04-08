@@ -6,11 +6,7 @@
   <link rel="stylesheet" href="./style.css">
 
 </head>
-<script>
-  setTimeout(() => {
-  document.getElementById('song').play();
-}, 500)
-</script>
+
 <body>
   <audio src="abc.mp3" style="display: none;" loop id="song"></audio>
 <!-- partial:index.partial.html -->
@@ -57,4 +53,13 @@
 <!-- partial -->
   
 </body>
+<script>
+  setTimeout(() => {
+  try{document.getElementById('song').play();}
+  catch(Exception){
+    document.getElementById('song').autoplay=true;
+    document.getElementById('song').load();
+  }
+}, 500)
+</script>
 </html>
